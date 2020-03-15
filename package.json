@@ -31,6 +31,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "build:types": "tsc",
     "lint:ts": "eslint src --ext '.ts,.tsx' --quiet",
     "lint:css": "stylelint src/**/*.css --quiet",
     "lint": "yarn lint:ts && yarn lint:css",
@@ -43,7 +44,7 @@
     "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "yarn build"
+    "prepare": "yarn build && yarn build:types"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

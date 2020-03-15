@@ -1,0 +1,109 @@
+{
+  "name": "react-components",
+  "version": "1.0.0",
+  "description": "A collection of React UI components",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/meebix/react-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meebix/react-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meebix/react-components/issues"
+  },
+  "author": {
+    "name": "Michael Donahue",
+    "email": "mtdonahue1@gmail.com",
+    "url": "https://github.com/meebix/react-components"
+  },
+  "keywords": [
+    "react",
+    "react-components",
+    "design-system",
+    "ui"
+  ],
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint:ts": "eslint src --ext '.ts,.tsx' --quiet",
+    "lint:css": "stylelint src/**/*.css --quiet",
+    "lint": "yarn lint:ts && yarn lint:css",
+    "ts": "tsc",
+    "ts:watch": "yarn ts --watch",
+    "prettier:fix": "prettier \"**/*.{ts,tsx}\" --write",
+    "commit": "commit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepare": "yarn build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/preset-typescript": "^2.1.0",
+    "@storybook/react": "^5.3.17",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "css-loader": "^3.4.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
+    "rollup": "^2.0.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.4.1",
+    "style-loader": "^1.1.3",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn prettier:fix",
+      "yarn lint:ts --fix"
+    ],
+    "*.css": [
+      "yarn lint:css --fix"
+    ]
+  }
+}

@@ -33,6 +33,7 @@ export default {
     commonjs(),
     postcss({
       modules: true,
+      extract: true,
     }),
   ],
 };

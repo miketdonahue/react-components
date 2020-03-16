@@ -30,7 +30,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf lib && rollup -c",
     "build:types": "tsc",
     "lint:ts": "eslint src --ext '.ts,.tsx' --quiet",
     "lint:css": "stylelint src/**/*.css --quiet",

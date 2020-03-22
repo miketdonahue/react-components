@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A collection of React UI components",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/index.es.js",
   "module": "lib/index.es.js",
   "jsnext:main": "lib/index.es.js",
   "types": "lib/index.d.ts",

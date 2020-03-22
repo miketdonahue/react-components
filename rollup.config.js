@@ -27,8 +27,7 @@ export default [
       commonjs(),
       postcss({
         modules: true,
-        extract: true,
-        namedExports: true,
+        extract: 'lib/button/button.module.css',
       }),
     ],
   },

@@ -9,14 +9,8 @@ export default [
     input: 'src/components/button/index.ts',
     output: [
       {
-        dir: 'lib/es/button',
+        dir: 'lib/button',
         format: 'es',
-        exports: 'named',
-        sourcemap: true,
-      },
-      {
-        dir: 'lib/cjs/button',
-        format: 'cjs',
         exports: 'named',
         sourcemap: true,
       },

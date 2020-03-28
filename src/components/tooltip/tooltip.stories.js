@@ -1,11 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 // import { Button } from '@storybook/react/demo';
-import { Button } from './button';
+import { Tooltip } from './tooltip';
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: 'Tooltip',
+  component: Tooltip,
 };
 
-export const Text = () => <Button>Hello Button</Button>;
+export const Text = () => <Tooltip>Hello Tooltip</Tooltip>;

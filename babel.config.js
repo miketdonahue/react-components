@@ -13,13 +13,5 @@ module.exports = {
   plugins: [
     '@babel/proposal-class-properties',
     '@babel/proposal-object-rest-spread',
-    [
-      'module-resolver',
-      {
-        root: ['./'],
-        alias: {},
-        extensions: ['.ts', '.tsx'],
-      },
-    ],
   ],
 };
